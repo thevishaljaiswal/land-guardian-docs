@@ -13,23 +13,23 @@ const ProposalTable: React.FC<ProposalTableProps> = ({ items, className }) => {
   const columns = [
     {
       header: "GAT/Survey No.",
-      accessorKey: "gatSurveyNumber",
+      accessorKey: "gatSurveyNumber" as keyof LandProposalItem,
     },
     {
       header: "Hissa No.",
-      accessorKey: "hissaNumber",
+      accessorKey: "hissaNumber" as keyof LandProposalItem,
     },
     {
       header: "CST No.",
-      accessorKey: "cstNumber",
+      accessorKey: "cstNumber" as keyof LandProposalItem,
     },
     {
       header: "Final Plot No.",
-      accessorKey: "finalPlotNumber",
+      accessorKey: "finalPlotNumber" as keyof LandProposalItem,
     },
     {
       header: "Land Zone",
-      accessorKey: "landZone",
+      accessorKey: "landZone" as keyof LandProposalItem,
       cell: (item: LandProposalItem) => (
         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
           {item.landZone}
@@ -38,15 +38,15 @@ const ProposalTable: React.FC<ProposalTableProps> = ({ items, className }) => {
     },
     {
       header: "Owner",
-      accessorKey: "owner",
+      accessorKey: "owner" as keyof LandProposalItem,
     },
     {
       header: "Co-Owner",
-      accessorKey: "coOwner",
+      accessorKey: "coOwner" as keyof LandProposalItem,
     },
     {
       header: "Land Area",
-      accessorKey: "landArea",
+      accessorKey: "landArea" as keyof LandProposalItem,
       cell: (item: LandProposalItem) => (
         <span>
           {item.landArea.toLocaleString()} {item.landUOM}
@@ -55,11 +55,11 @@ const ProposalTable: React.FC<ProposalTableProps> = ({ items, className }) => {
     },
     {
       header: "Land Rate",
-      accessorKey: "landRate",
+      accessorKey: "landRate" as keyof LandProposalItem,
     },
     {
       header: "Land Cost",
-      accessorKey: "landCost",
+      accessorKey: "landCost" as keyof LandProposalItem,
     },
   ];
 
